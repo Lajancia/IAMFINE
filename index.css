@@ -1,9 +1,41 @@
 /* 공통 컴포넌트 */
+body {
+  margin: 30px;
+}
+#title {
+  text-align: right;
+}
+.event,
+button {
+  background-color: black;
+  color: white;
+  width: 50px;
+  border-radius: 20%;
+  border-color: black;
+}
+.event:hover,
+button:hover {
+  background-color: white;
+  color: black;
+  width: 50px;
+  border-radius: 20%;
+  border-color: black;
+}
+/* input {
+  border-color: transparent;
+  border-radius: 10%;
+}
+input:hover {
+  border-color: black;
+} */
 
 /* Graph Design */
 .container {
   /* This makes the container a flex container */
+  background-color: #ffffff;
   display: flex;
+  padding-left: 20px;
+  padding-top: 20px;
 }
 #max,
 #mid {
@@ -52,7 +84,11 @@
   display: inline-block;
 }
 
-/* Delete */
+/* Add & Delete */
+#jsonTable {
+  background-color: #ffffff;
+  /* width: 50%; */
+}
 
 /* Add */
 

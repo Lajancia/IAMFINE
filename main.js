@@ -154,7 +154,8 @@ const clickHandleTableEdit = () => {
             table_value = document.getElementById('table_value' + i).value;
             if (Number.isNaN(parseFloat(table_value))) throw new Error('숫자를 입력해 주세요.');
             else if (parseFloat(table_value) < 0) throw new Error('0보다 큰 값을 입력해 주세요');
-            oldData[i].value = document.getElementById('table_value' + i).value;
+            else if (!/^\d+(\.\d+)?$/.test(table_value.toString())) throw new Error('입력값에 문자가 포함되어 있습니다');
+            oldData[i].value = parseFloat(document.getElementById('table_value' + i).value);
         }
         console.log('edit')
         sampleData.data = oldData;
@@ -173,9 +174,8 @@ const clickHandleTableEdit = () => {
  */
 const clickHandleAdd = () => {
     try {
-        let id = parseFloat(document.getElementById("id_num").value);
-        let value = parseFloat(document.getElementById("value_num").value);
-        
+        let id = document.getElementById("id_num").value;
+        let value = document.getElementById("value_num").value
         let oldData = JSON.parse(JSON.stringify(sampleData.data));
         // let newData_result = id_value_Check(id,value)
         if (id_value_Check(id,value)) {
@@ -255,10 +255,12 @@ const id_value_Check = (new_id, new_value) => {
         let id = parseFloat(new_id);
         let value = parseFloat(new_value);
         
+        // console.log(/^\d+(\.\d+)?$/.test(value.toString()))
         //check id id and value is not integer
         if (Number.isNaN(id) || Number.isNaN(value)) throw new Error('숫자를 입력해 주세요');
         else if (!Number.isInteger(id)) throw new Error('id는 정수로 입력해 주세요');
         else if (parseInt(value) < 0) throw new Error('0보다 큰 값을 입력해 주세요');
+        else if (!/^\d+(\.\d+)?$/.test(new_id.toString()) || !/^\d+(\.\d+)?$/.test(new_value.toString())) throw new Error('입력값에 문자가 포함되어 있습니다.');
         
         return true
     } catch (e) {
