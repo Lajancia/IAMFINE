@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>아이엠파인 SD 지원자 황수민</title>
+        <link rel="stylesheet" href="./index.css">
+    </header>
+    <body>
+        <h1>아이엠파인 SD 지원자 황수민</h1>
+
+        <!-- Bar graph component -->
+        <h2>그래프</h2>
+        <div class = "container">
+            <div class="graph_side"></div>
+            <div class="graph_container">
+                <div id="graph" class="scrollable-div"></div>
+                <div id="line"></div>
+                <div id="labels" class="scrollable-div"></div>
+            </div>
+        </div>
+        
+        <!-- Editable data table component with delete button -->
+        <h2>값 편집</h2>
+        <form onsubmit="event.preventDefault(); clickHandleTableEdit();">
+            <table id="jsonTable"></table>
+            <input type="submit" value="Apply">
+        </form>
+        
+
+        <!-- data add component -->
+        <h2>값 추가</h2>
+        <form onsubmit="event.preventDefault(); clickHandleAdd();">
+            <input id="id_num" name="ID">
+            <input id="value_num" name="Value">
+            <input type="submit" value="Add">
+        </form>
+
+        <!-- data edit component -->
+        <h2>값 고급 편집</h2>
+        <form onsubmit="event.preventDefault(); clickHandleEdit();">
+            <textarea id="jsonOutput" rows="10" cols="50"></textarea>
+            <input type="submit" value="Apply">
+        </form>
+        
+        <!-- main javascript -->
+        <script type="text/javascript" src="main.js"></script>
+    </body>
+</html>
+

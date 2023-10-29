@@ -1,0 +1,59 @@
+/* 공통 컴포넌트 */
+
+/* Graph Design */
+.container {
+  /* This makes the container a flex container */
+  display: flex;
+}
+#max,
+#mid {
+  margin-top: 0%;
+  margin-bottom: 100%;
+  text-align: right;
+}
+.graph_container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+.scrollable-div {
+  display: inline-block;
+  padding-left: 20px;
+}
+.bar {
+  width: 10px;
+  height: 250px;
+  margin-right: 25px;
+  background-color: #000000;
+  display: inline-block;
+}
+#graph {
+  /* transform: rotateX(180deg); */
+  /* width: 100%; */
+  position: relative;
+  height: 100px;
+  margin: 10px;
+  display: inline-block;
+  border-left: 3px solid black;
+  border-bottom: 3px solid black;
+
+  /* border-bottom: 3px solid black; */
+  /* border-bottom: 4px solid black; */
+  /* border-bottom: #000000; */
+}
+#labels {
+  height: 5vh;
+  display: inline-block;
+}
+.label {
+  width: 30px;
+  margin-right: 5px;
+  text-align: center;
+  display: inline-block;
+}
+
+/* Delete */
+
+/* Add */
+
+/* Edit */
