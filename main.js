@@ -9,7 +9,8 @@ let js = [
     {"id": 6, "value": 20},
     {"id": 7, "value": 80},
     {"id": 8, "value": 100},
-    {"id": 9, "value": 70}, 
+    { "id": 9, "value": 70 },
+    
 ]
 
 /* Sample Data Store Class */
